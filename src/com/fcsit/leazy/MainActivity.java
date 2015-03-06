@@ -1,6 +1,5 @@
 package com.fcsit.leazy;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -95,7 +94,7 @@ public class MainActivity extends ActionBarActivity {
 	 */
 	public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-		private final String[] TITLE = { "Generate", "History"};
+		private final String[] TITLE = { "Video", "Login/Signup","History"};
 
 		public SectionsPagerAdapter(FragmentManager fm) {
 			super(fm);
@@ -116,6 +115,10 @@ public class MainActivity extends ActionBarActivity {
 			case 1:
 				fragment = new HomeFragment();
 				break;
+				
+			case 2:
+				fragment = new HomeFragment();
+				break;	
 			}
 
 			return fragment;

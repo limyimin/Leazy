@@ -75,7 +75,7 @@ public class HomeFragment extends Fragment {
 				// user
 				if (password.equals(storedPassword)) {
 					Toast.makeText(getActivity(),
-							"Congrats: Login Successfull", Toast.LENGTH_LONG)
+							"Congrats: Login Successful", Toast.LENGTH_LONG)
 							.show();
 					dialog.dismiss();
 
