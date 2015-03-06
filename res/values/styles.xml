@@ -1,0 +1,38 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="Home.Generate.Text" parent="android:Widget.Holo.Light.Button">
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+
+    <style name="Text.Blue.Bold" parent="android:Widget.Holo.Light.Button">
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:textColor">#67c9cf</item>
+        <item name="android:textSize">24sp</item>
+        <item name="fontPath">fonts/Roboto-Bold.ttf</item>
+    </style>
+
+</resources>

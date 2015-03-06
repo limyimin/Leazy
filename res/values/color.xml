@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="background_tab_pressed">#6633B5E5</color>
+	<color name="blue_green">#0D98BA</color>
+	<color name="rose">#FF55A3</color>
+	<color name="lavender"> #BF94E4</color>
+	<color name="seablue">#67c9cf</color>
+	<color name="grey">#D6D6D6</color>
+	<color name="dark_grey">#737575</color>
+	<color name="almond">#EFDECD</color>
+	<color name="bone">#E3DAC9</color>
+	<color name="alice_blue">#F0F8FF</color>
+	<color name="white">#FFFFFF</color>
+</resources>

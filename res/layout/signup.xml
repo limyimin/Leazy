@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/edittext_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="User Name" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/edittext_password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/edittext_confirm_password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirm Password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/edittext_age"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Age"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/edittext_weight"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Weight"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/edittext_height"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Height"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textview_gender"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Gender" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/radio_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+         
+            android:text="male" />
+
+        <RadioButton
+            android:id="@+id/radio_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           
+            android:text="female" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_create_account"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="Create Account" />
+
+</LinearLayout>
