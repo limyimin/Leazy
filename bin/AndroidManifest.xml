@@ -7,6 +7,8 @@
     <uses-sdk
         android:minSdkVersion="10"
         android:targetSdkVersion="19" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -23,20 +25,43 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <!-- Sign Up -->
         <activity
-            android:name="com.fcsit.leazy.SignUpFragment"
-            android:parentActivityName="com.fcsit.leazy.HomeFragment" >
+            android:name="com.fcsit.leazy.SignUpActivity"
+            android:parentActivityName="com.fcsit.leazy.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.fcsit.leazy.HomeActivity" />
+                android:value="com.fcsit.leazy.MainActivity" />
         </activity>
+        
+        <!-- Selection Activity -->
         <activity
-            android:name="com.fcsit.leazy.SelectActivity"
-            android:parentActivityName="com.fcsit.leazy.HomeFragment" >
+            android:name="com.fcsit.leazy.SelectionActivity"
+            android:parentActivityName="com.fcsit.leazy.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.fcsit.leazy.HomeActivity" />
+                android:value="com.fcsit.leazy.MainActivity" />
         </activity>
+        
+         <!-- Eat Activity -->
+        <activity
+            android:name="com.fcsit.leazy.EatActivity"
+            android:parentActivityName="com.fcsit.leazy.SelectionActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fcsit.leazy.SelectionActivity" />
+        </activity>
+        
+        <!-- Work Activity -->
+        <activity
+            android:name="com.fcsit.leazy.Work"
+            android:parentActivityName="com.fcsit.leazy.SelectionActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fcsit.leazy.SelectionActivity" />
+        </activity>
+        
     </application>
 
 </manifest>

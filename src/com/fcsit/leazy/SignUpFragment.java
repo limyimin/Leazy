@@ -2,6 +2,7 @@ package com.fcsit.leazy;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,16 +18,15 @@ public class SignUpFragment extends Fragment {
 	RadioButton radioBtnMale, radioBtnFemale;
 
 	LoginDataBaseAdapter loginDataBaseAdapter;
-	
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		
+
 		View v = inflater.inflate(R.layout.signup, container, false);
-		
-		
-		//ActionBar actionBar = getSupportActionBar();
-	    //actionBar.setDisplayHomeAsUpEnabled(true);
+
+//		 ActionBar actionBar = getSupportActionBar();
+//		 actionBar.setDisplayHomeAsUpEnabled(true);
 
 		// get Instance of Database Adapter
 		loginDataBaseAdapter = new LoginDataBaseAdapter(getActivity());
@@ -35,14 +35,15 @@ public class SignUpFragment extends Fragment {
 		// Get References of Views
 		editTextUserName = (EditText) v.findViewById(R.id.edittext_username);
 		editTextPassword = (EditText) v.findViewById(R.id.edittext_password);
-		editTextConfirmPassword = (EditText) v.findViewById(R.id.edittext_confirm_password);
+		editTextConfirmPassword = (EditText) v
+				.findViewById(R.id.edittext_confirm_password);
 		editTextWeight = (EditText) v.findViewById(R.id.edittext_weight);
 		editTextHeight = (EditText) v.findViewById(R.id.edittext_height);
 		editTextAge = (EditText) v.findViewById(R.id.edittext_age);
-		radioBtnMale = (RadioButton)v. findViewById(R.id.radio_male);
+		radioBtnMale = (RadioButton) v.findViewById(R.id.radio_male);
 		radioBtnFemale = (RadioButton) v.findViewById(R.id.radio_female);
 
-		btnCreateAccount = (Button)v. findViewById(R.id.button_create_account);
+		btnCreateAccount = (Button) v.findViewById(R.id.button_create_account);
 		btnCreateAccount.setOnClickListener(new View.OnClickListener() {
 
 			public void onRadioButtonClicked(View view) {
@@ -83,9 +84,8 @@ public class SignUpFragment extends Fragment {
 				}
 				// check if both password matches
 				if (!password.equals(confirmPassword)) {
-					Toast.makeText(getActivity(),
-							"Password does not match", Toast.LENGTH_LONG)
-							.show();
+					Toast.makeText(getActivity(), "Password does not match",
+							Toast.LENGTH_LONG).show();
 					return;
 
 				} else {
@@ -97,11 +97,8 @@ public class SignUpFragment extends Fragment {
 				}
 			}
 		});
-			
-			return v;
-		}
 
-			
+		return v;
 	}
 
-
+}

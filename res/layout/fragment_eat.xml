@@ -2,21 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="30dp"
     android:orientation="vertical" >
 
     <Spinner
-        android:id="@+id/spinner1"
+        android:id="@+id/spinner_eat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     
     <TextView 
-        android:id="@+id/textview_eat1"
+        android:id="@+id/textview_eat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Or"/>
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btn_quick_add_calories"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Quick Add Calories" />
