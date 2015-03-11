@@ -10,13 +10,13 @@
         android:layout_height="wrap_content" />
     
     <TextView 
-        android:id="@+id/textview_eat"
+        android:id="@+id/textview_work"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Or"/>
 
     <Button
-        android:id="@+id/btn_quick_add_calories"
+        android:id="@+id/btn_quick_add_burned_calories"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Quick Add Burned Calories" />

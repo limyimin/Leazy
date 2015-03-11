@@ -2,12 +2,14 @@ package com.fcsit.leazy;
 
 import java.util.List;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
@@ -22,7 +24,7 @@ public class WorkFragment extends Fragment implements OnItemSelectedListener {
 	Spinner spinner;
 
 	// Add button
-	Button btnAdd;
+	Button btnAddBurnedCal;
 
 	// Input text
 	EditText inputLabel;
@@ -31,15 +33,73 @@ public class WorkFragment extends Fragment implements OnItemSelectedListener {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		View v = inflater.inflate(R.layout.fragment_eat, container, false);
+		View v = inflater.inflate(R.layout.fragment_work, container, false);
 
 		// Spinner element
 		spinner = (Spinner) v.findViewById(R.id.spinner_work);
+		btnAddBurnedCal = (Button) v
+				.findViewById(R.id.btn_quick_add_burned_calories);
 
 		loadSpinnerData();
 
 		// Spinner click listener
 		spinner.setOnItemSelectedListener(this);
+
+		btnAddBurnedCal.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				final Dialog dialog = new Dialog(getActivity());
+				dialog.setContentView(R.layout.burned_calories_to_add);
+				dialog.setTitle("Calories To Add");
+
+				// get the References of views
+				final EditText editTextAddBurnedCal = (EditText) dialog
+						.findViewById(R.id.editText_burned_cal_to_add);
+
+				Button btn_burned_add_cal = (Button) dialog
+						.findViewById(R.id.button_done_burned_add_cal);
+
+				// Set On ClickListener
+				btn_burned_add_cal
+						.setOnClickListener(new View.OnClickListener() {
+
+							public void onClick(View v) {
+								// get The User name and Password
+								String addBurnedCal = editTextAddBurnedCal
+										.getText().toString();
+
+								// fetch the Password form database for
+								// respective user
+								// name
+								// String storedPassword = loginDataBaseAdapter
+								// .getSinlgeEntry(userName);
+
+								// check if the Stored password matches with
+								// Password
+								// entered by
+								// user
+								// if (password.equals(storedPassword)) {
+								// Toast.makeText(getActivity(),
+								// "Congrats: Login Successful",
+								// Toast.LENGTH_LONG).show();
+								// dialog.dismiss();
+								//
+								// Intent intent = new Intent(getActivity(),
+								// SelectionActivity.class);
+								// startActivity(intent);
+								// } else {
+								// Toast.makeText(getActivity(),
+								// "User Name or Password does not match",
+								// Toast.LENGTH_LONG).show();
+								// }
+							}
+						});
+
+				dialog.show();
+
+			}
+		});
 
 		// // Loading spinner data from database
 		// loadSpinnerData();

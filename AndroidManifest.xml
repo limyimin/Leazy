@@ -7,15 +7,35 @@
     <uses-sdk
         android:minSdkVersion="10"
         android:targetSdkVersion="19" />
-    
+
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    
+    <!-- Required to show current location -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-    
-        android:theme="@style/Theme.AppCompat.Light">
+        android:theme="@style/Theme.AppCompat.Light" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- splash screen -->
+        <activity
+            android:name="com.fcsit.leazy.SplashscreenActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.fcsit.leazy.MainActivity"
             android:label="@string/app_name" >
@@ -25,7 +45,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
+
         <!-- Sign Up -->
         <activity
             android:name="com.fcsit.leazy.SignUpActivity"
@@ -34,7 +54,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.fcsit.leazy.MainActivity" />
         </activity>
-        
+
         <!-- Selection Activity -->
         <activity
             android:name="com.fcsit.leazy.SelectionActivity"
@@ -43,8 +63,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.fcsit.leazy.MainActivity" />
         </activity>
-        
-         <!-- Eat Activity -->
+
+        <!-- Eat Activity -->
         <activity
             android:name="com.fcsit.leazy.EatActivity"
             android:parentActivityName="com.fcsit.leazy.SelectionActivity" >
@@ -52,16 +72,47 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.fcsit.leazy.SelectionActivity" />
         </activity>
-        
+
         <!-- Work Activity -->
         <activity
-            android:name="com.fcsit.leazy.Work"
+            android:name="com.fcsit.leazy.WorkActivity"
             android:parentActivityName="com.fcsit.leazy.SelectionActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.fcsit.leazy.SelectionActivity" />
         </activity>
         
+        <!-- Heart Activity -->
+        <activity
+            android:name="com.fcsit.leazy.HeartActivity"
+            android:parentActivityName="com.fcsit.leazy.SelectionActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fcsit.leazy.SelectionActivity" />
+        </activity>
+        
+         <!-- Pedo Activity -->
+        <activity
+            android:name="com.fcsit.leazy.PedoActivity"
+            android:parentActivityName="com.fcsit.leazy.SelectionActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fcsit.leazy.SelectionActivity" />
+        </activity>
+        
+         <!-- Result Activity -->
+        <activity
+            android:name="com.fcsit.leazy.ResultActivity"
+            android:parentActivityName="com.fcsit.leazy.SelectionActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fcsit.leazy.SelectionActivity" />
+        </activity>
     </application>
 
+    <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyB_xSns7wOd_drf_mDzE8VadSUlGf6poLE" />
+    
+    
 </manifest>

@@ -10,7 +10,7 @@
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="56dip"
-        android:background="@color/lavender"
+        android:background="@color/orange"
         android:textSize="14sp"
         app:pstsDividerColor="@color/grey"
         app:pstsIndicatorColor="@android:color/white" />

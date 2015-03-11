@@ -200,6 +200,7 @@ public class HeartRateMonitor extends Activity {
                 }
                 int beatsAvg = (beatsArrayAvg / beatsArrayCnt);
                 text.setText(String.valueOf(beatsAvg));
+                //I WANT SEND beatsAvg TO MY HEART FRAGMENT!!!!!!!
                 startTime = System.currentTimeMillis();
                 beats = 0;
             }

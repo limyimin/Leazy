@@ -2,11 +2,14 @@ package com.fcsit.leazy;
 
 import java.util.List;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -22,10 +25,7 @@ public class EatFragment extends Fragment implements OnItemSelectedListener {
 	Spinner spinner;
 
 	// Add button
-	Button btnAdd;
-
-	// Input text
-	EditText inputLabel;
+	Button btnAddCal;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,8 +35,65 @@ public class EatFragment extends Fragment implements OnItemSelectedListener {
 
 		// Spinner element
 		spinner = (Spinner) v.findViewById(R.id.spinner_eat);
+		btnAddCal = (Button) v.findViewById(R.id.btn_quick_add_calories);
 
 		loadSpinnerData();
+		
+		btnAddCal.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				final Dialog dialog = new Dialog(getActivity());
+				dialog.setContentView(R.layout.calories_to_add);
+				dialog.setTitle("Calories To Add");
+
+				// get the References of views
+				final EditText editTextAddCal = (EditText) dialog
+						.findViewById(R.id.editText_cal_to_add);
+			
+
+				Button btn_add_cal = (Button) dialog
+						.findViewById(R.id.button_done_add_cal);
+
+				// Set On ClickListener
+				btn_add_cal.setOnClickListener(new View.OnClickListener() {
+
+					public void onClick(View v) {
+						// get The User name and Password
+						String addCal = editTextAddCal.getText().toString();
+					
+
+						// fetch the Password form database for respective user
+						// name
+//						String storedPassword = loginDataBaseAdapter
+//								.getSinlgeEntry(userName);
+
+						// check if the Stored password matches with Password
+						// entered by
+						// user
+//						if (password.equals(storedPassword)) {
+//							Toast.makeText(getActivity(),
+//									"Congrats: Login Successful",
+//									Toast.LENGTH_LONG).show();
+//							dialog.dismiss();
+//
+//							Intent intent = new Intent(getActivity(),
+//									SelectionActivity.class);
+//							startActivity(intent);
+//						} else {
+//							Toast.makeText(getActivity(),
+//									"User Name or Password does not match",
+//									Toast.LENGTH_LONG).show();
+//						}
+					}
+				});
+
+				dialog.show();
+
+			
+				
+			}
+		});
 
 		// Spinner click listener
 		spinner.setOnItemSelectedListener(this);

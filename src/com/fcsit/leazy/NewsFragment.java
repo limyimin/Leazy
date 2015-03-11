@@ -99,7 +99,7 @@ public class NewsFragment extends Fragment {
 				}
 			}
 
-		}.execute("http://feeds.feedburner.com/livelifedrive");
+		}.execute("http://new.medicine.com.my/feed/");
 
 		// for(RssItem rssItem : rssItems) {
 		// Log.i("RSS Reader", rssItem.getTitle());

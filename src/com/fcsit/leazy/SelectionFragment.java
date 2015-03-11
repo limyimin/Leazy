@@ -29,8 +29,8 @@ public class SelectionFragment extends Fragment {
 
 			@Override
 			public void onClick(View v) {
-				Intent textIntent = new Intent(getActivity(), EatActivity.class);
-				startActivity(textIntent);
+				Intent eatIntent = new Intent(getActivity(), EatActivity.class);
+				startActivity(eatIntent);
 
 			}
 		});
@@ -39,8 +39,8 @@ public class SelectionFragment extends Fragment {
 
 			@Override
 			public void onClick(View v) {
-				Intent locationIntent = new Intent(getActivity(), WorkActivity.class);
-				startActivity(locationIntent);
+				Intent workIntent = new Intent(getActivity(), WorkActivity.class);
+				startActivity(workIntent);
 
 			}
 		});
@@ -49,8 +49,8 @@ public class SelectionFragment extends Fragment {
 
 			@Override
 			public void onClick(View v) {
-				Intent phoneIntent = new Intent(getActivity(), HeartActivity.class);
-				startActivity(phoneIntent);
+				Intent heartIntent = new Intent(getActivity(), HeartActivity.class);
+				startActivity(heartIntent);
 
 			}
 		});
@@ -59,8 +59,8 @@ public class SelectionFragment extends Fragment {
 
 			@Override
 			public void onClick(View v) {
-				Intent contactIntent = new Intent(getActivity(), PedoActivity.class);
-				startActivity(contactIntent);
+				Intent pedoIntent = new Intent(getActivity(), PedoActivity.class);
+				startActivity(pedoIntent);
 
 			}
 		});
@@ -69,8 +69,8 @@ public class SelectionFragment extends Fragment {
 
 			@Override
 			public void onClick(View v) {
-				Intent smsIntent = new Intent(getActivity(), ResultActivity.class);
-				startActivity(smsIntent);
+				Intent resultIntent = new Intent(getActivity(), ResultActivity.class);
+				startActivity(resultIntent);
 
 			}
 		});
