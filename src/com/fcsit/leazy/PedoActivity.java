@@ -24,7 +24,6 @@ public class PedoActivity extends ActionBarActivity {
 			PedoFragment pedofragment = new PedoFragment();
 			Bundle extra = getIntent().getExtras();
 			pedofragment.setArguments(extra);
-			
 
 			FragmentManager fm = getSupportFragmentManager();
 			FragmentTransaction ft = fm.beginTransaction().add(R.id.fragment_container, pedofragment);

@@ -8,12 +8,15 @@
         android:minSdkVersion="10"
         android:targetSdkVersion="19" />
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-    
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
     <!-- Required to show current location -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -81,7 +84,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.fcsit.leazy.SelectionActivity" />
         </activity>
-        
+
         <!-- Heart Activity -->
         <activity
             android:name="com.fcsit.leazy.HeartActivity"
@@ -90,8 +93,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.fcsit.leazy.SelectionActivity" />
         </activity>
-        
-         <!-- Pedo Activity -->
+
+        <!-- Pedo Activity -->
         <activity
             android:name="com.fcsit.leazy.PedoActivity"
             android:parentActivityName="com.fcsit.leazy.SelectionActivity" >
@@ -99,8 +102,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.fcsit.leazy.SelectionActivity" />
         </activity>
-        
-         <!-- Result Activity -->
+
+        <!-- Result Activity -->
         <activity
             android:name="com.fcsit.leazy.ResultActivity"
             android:parentActivityName="com.fcsit.leazy.SelectionActivity" >
@@ -111,8 +114,7 @@
     </application>
 
     <meta-data
-            android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyB_xSns7wOd_drf_mDzE8VadSUlGf6poLE" />
-    
-    
+        android:name="com.google.android.maps.v2.API_KEY"
+        android:value="AIzaSyB_xSns7wOd_drf_mDzE8VadSUlGf6poLE" />
+
 </manifest>
