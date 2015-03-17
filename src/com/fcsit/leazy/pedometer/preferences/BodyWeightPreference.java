@@ -18,7 +18,7 @@
 
 package com.fcsit.leazy.pedometer.preferences;
 
-import com.fcsit.leazy.pedometer.R;
+import com.fcsit.leazy.R;
 import android.content.Context;
 import android.preference.EditTextPreference;
 import android.util.AttributeSet;
