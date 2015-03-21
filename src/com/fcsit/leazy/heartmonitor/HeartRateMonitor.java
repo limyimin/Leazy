@@ -65,8 +65,10 @@ public class HeartRateMonitor extends Activity {
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
+    	
+    	Log.d(TAG,"HR");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.fragment_heart_back);
 
         preview = (SurfaceView) findViewById(R.id.preview);
         previewHolder = preview.getHolder();

@@ -9,17 +9,19 @@
         android:id="@+id/spinner_eat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    
-    <TextView 
+
+    <TextView
         android:id="@+id/textview_eat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Or"/>
+        android:layout_gravity="center"
+        android:text="OR" />
 
     <Button
         android:id="@+id/btn_quick_add_calories"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Quick Add Calories" />
 
 </LinearLayout>

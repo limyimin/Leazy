@@ -38,9 +38,10 @@ public class PedoActivity extends ActionBarActivity {
 
 
 
-
-
-
+//
+//
+//
+//package com.fcsit.leazy;
 ///*
 // *  Pedometer - Android App
 // *  Copyright (C) 2009 Levente Bagi
@@ -59,7 +60,6 @@ public class PedoActivity extends ActionBarActivity {
 // *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // */
 //
-//package com.fcsit.leazy;
 //
 //
 //import android.app.Activity;
@@ -121,7 +121,7 @@ public class PedoActivity extends ActionBarActivity {
 //        mStepValue = 0;
 //        mPaceValue = 0;
 //        
-//        setContentView(R.layout.fragment_pedo);
+//        setContentView(R.layout.main);
 //        
 //        mUtils = Utils.getInstance();
 //    }

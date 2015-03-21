@@ -2,8 +2,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="50dp"
-    android:layout_marginRight="50dp"
     android:gravity="center_vertical"
     android:orientation="vertical" >
 
@@ -11,13 +9,14 @@
         android:id="@+id/buttonSignIN"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:onClick="signIn"
+        android:background="@android:color/transparent"
         android:text="Sign In" />
 
     <Button
         android:id="@+id/buttonSignUP"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
         android:text="Sign Up" />
 
 </LinearLayout>

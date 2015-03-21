@@ -16,7 +16,7 @@ public class WorkActivity extends ActionBarActivity {
 		setContentView(R.layout.frame);
 
 		ActionBar actionBar = getSupportActionBar();
-		actionBar.setDisplayHomeAsUpEnabled(true);
+		actionBar.setDisplayHomeAsUpEnabled(false);
 
 		if (savedInstanceState == null) {
 

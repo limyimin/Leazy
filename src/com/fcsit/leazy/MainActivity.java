@@ -94,7 +94,7 @@ public class MainActivity extends ActionBarActivity {
 	 */
 	public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-		private final String[] TITLE = { "VIDEOS", "NEWS","LOGIN/SIGNUP"};
+		private final String[] TITLE = { "VIDEOS", "NEWS","LOGIN", "ABOUT"};
 
 		public SectionsPagerAdapter(FragmentManager fm) {
 			super(fm);
@@ -118,6 +118,10 @@ public class MainActivity extends ActionBarActivity {
 				
 			case 2:
 				fragment = new HomeFragment();
+				break;	
+				
+			case 3:
+				fragment = new AboutFragment();
 				break;	
 			}
 
