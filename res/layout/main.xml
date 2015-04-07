@@ -6,17 +6,28 @@
     android:orientation="vertical" >
 
     <Button
-        android:id="@+id/buttonSignIN"
-        android:layout_width="fill_parent"
+        android:id="@+id/button_signin"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:background="@android:color/transparent"
         android:text="Sign In" />
 
     <Button
-        android:id="@+id/buttonSignUP"
-        android:layout_width="fill_parent"
+        android:id="@+id/button_signup"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:background="@android:color/transparent"
         android:text="Sign Up" />
+
+    <Button
+        android:id="@+id/btn_proceed"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/transparent"
+        android:text="Proceed without login" />
 
 </LinearLayout>

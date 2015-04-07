@@ -1,12 +1,12 @@
 package com.fcsit.leazy;
 
-import java.util.List;
-
 import android.app.Dialog;
-import android.content.Intent;
+
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -17,6 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class EatFragment extends Fragment implements OnItemSelectedListener {
@@ -25,7 +26,9 @@ public class EatFragment extends Fragment implements OnItemSelectedListener {
 	Spinner spinner;
 
 	// Add button
-	Button btnAddCal;
+	Button btnAddCal, btnAllCal;
+	TextView tvTotalCal;
+	String[] display;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,12 +38,43 @@ public class EatFragment extends Fragment implements OnItemSelectedListener {
 
 		// Spinner element
 		spinner = (Spinner) v.findViewById(R.id.spinner_eat);
-		btnAddCal = (Button) v.findViewById(R.id.btn_quick_add_calories);
+		// Integer[] calories = new Integer[] { 100, 200, 300, 400, 500 };
+		// System.out.print(calories[0]);
+		// int a = calories[0];
+		Resources res = getResources();
+		String[] item_food = res.getStringArray(R.array.items_food);
+		String[] item_kcal = res.getStringArray(R.array.items_kcal);
 
-		loadSpinnerData();
-		
+		int len = Math.min(item_food.length, item_kcal.length);
+		display = new String[len];
+		for (int i = 0; i < len; i++) {
+			display[i] = String.format("%s %skcal", item_food[i], item_kcal[i]);
+		}
+
+		// display = new String[] { (item_food[0]+" " + item_kcal[0] + "kcal"),
+		// (item_food[1] +" "+ item_kcal[1] + "kcal"),
+		// (item_food[2] +" "+ item_kcal[2] + "kcal"),
+		// (item_food[3] +" "+ item_kcal[3] + "kcal"),
+		// (item_food[4] +" "+ item_kcal[4] + "kcal"),
+		// (item_food[5] +" "+ item_kcal[5] + "kcal") };
+		// Log.d("EatFragment", "display food [0]= " + display[0]);
+
+		ArrayAdapter<CharSequence> adapter = new ArrayAdapter<CharSequence>(
+				getActivity(), android.R.layout.simple_spinner_item, display);
+		spinner.setAdapter(adapter);
+
+		String cal = (String) spinner.getSelectedItem();
+		String str = cal.replaceAll("(.*\\s)(\\d)(.*)", "$2");
+		Log.d("ef", "str=" + str);
+
+		btnAddCal = (Button) v.findViewById(R.id.btn_quick_add_calories);
+		btnAllCal = (Button) v.findViewById(R.id.btn_total_calories);
+		tvTotalCal = (TextView) v.findViewById(R.id.textview_total_calories);
+
+		// loadSpinnerData();
+
 		btnAddCal.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				final Dialog dialog = new Dialog(getActivity());
@@ -50,10 +84,21 @@ public class EatFragment extends Fragment implements OnItemSelectedListener {
 				// get the References of views
 				final EditText editTextAddCal = (EditText) dialog
 						.findViewById(R.id.editText_cal_to_add);
-			
 
 				Button btn_add_cal = (Button) dialog
 						.findViewById(R.id.button_done_add_cal);
+
+				Button btn_cancel = (Button) dialog
+						.findViewById(R.id.button_cancel);
+
+				btn_cancel.setOnClickListener(new View.OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						dialog.cancel();
+					}
+				});
 
 				// Set On ClickListener
 				btn_add_cal.setOnClickListener(new View.OnClickListener() {
@@ -61,37 +106,25 @@ public class EatFragment extends Fragment implements OnItemSelectedListener {
 					public void onClick(View v) {
 						// get The User name and Password
 						String addCal = editTextAddCal.getText().toString();
-					
 
-						// fetch the Password form database for respective user
-						// name
-//						String storedPassword = loginDataBaseAdapter
-//								.getSinlgeEntry(userName);
+						int cal = Integer.valueOf(addCal);
+						Log.d("ef", "valueOf=" + cal);
 
-						// check if the Stored password matches with Password
-						// entered by
-						// user
-//						if (password.equals(storedPassword)) {
-//							Toast.makeText(getActivity(),
-//									"Congrats: Login Successful",
-//									Toast.LENGTH_LONG).show();
-//							dialog.dismiss();
-//
-//							Intent intent = new Intent(getActivity(),
-//									SelectionActivity.class);
-//							startActivity(intent);
-//						} else {
-//							Toast.makeText(getActivity(),
-//									"User Name or Password does not match",
-//									Toast.LENGTH_LONG).show();
-//						}
 					}
 				});
 
 				dialog.show();
 
-			
-				
+			}
+		});
+
+		btnAllCal.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				// display TextView of Total Calories
+
 			}
 		});
 
@@ -123,24 +156,24 @@ public class EatFragment extends Fragment implements OnItemSelectedListener {
 	/**
 	 * Function to load the spinner data from SQLite database
 	 * */
-	private void loadSpinnerData() {
-		// database handler
-		DatabaseHandler db = new DatabaseHandler(getActivity());
-
-		// Spinner Drop down elements
-		List<String> lables = db.getAllLabels();
-
-		// Creating adapter for spinner
-		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(
-				getActivity(), android.R.layout.simple_spinner_item, lables);
-
-		// Drop down layout style - list view with radio button
-		dataAdapter
-				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-		// attaching data adapter to spinner
-		spinner.setAdapter(dataAdapter);
-	}
+	// private void loadSpinnerData() {
+	// // database handler
+	// DatabaseHandler db = new DatabaseHandler(getActivity());
+	//
+	// // Spinner Drop down elements
+	// List<String> lables = db.getAllLabels();
+	//
+	// // Creating adapter for spinner
+	// ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(
+	// getActivity(), android.R.layout.simple_spinner_item, lables);
+	//
+	// // Drop down layout style - list view with radio button
+	// dataAdapter
+	// .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+	//
+	// // attaching data adapter to spinner
+	// spinner.setAdapter(dataAdapter);
+	// }
 
 	@Override
 	public void onItemSelected(AdapterView<?> parent, View view, int position,

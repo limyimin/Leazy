@@ -18,9 +18,10 @@
 
 package com.fcsit.leazy;
 
-import com.fcsit.leazy.PedometerSettings;
-import com.fcsit.leazy.StepService;
-import com.fcsit.leazy.Utils;
+import com.fcsit.leazy.pedometer.PedometerSettings;
+import com.fcsit.leazy.pedometer.Settings;
+import com.fcsit.leazy.pedometer.StepService;
+import com.fcsit.leazy.pedometer.Utils;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -314,9 +315,13 @@ public class PedoFragment extends Fragment {
 
 	/* Creates the menu items */
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-		menu.clear();
 		inflater.inflate(R.menu.main, menu);
+		super.onCreateOptionsMenu(menu, inflater);
+
+		menu.clear();
+
 		if (mIsRunning) {
+
 			menu.add(0, MENU_PAUSE, 0, R.string.pause)
 					.setIcon(android.R.drawable.ic_media_pause)
 					.setShortcut('1', 'p');
@@ -335,8 +340,13 @@ public class PedoFragment extends Fragment {
 		menu.add(0, MENU_QUIT, 0, R.string.quit)
 				.setIcon(android.R.drawable.ic_lock_power_off)
 				.setShortcut('9', 'q');
-		
 	}
+
+	// @Override
+	// public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+	// inflater.inflate(R.menu.main, menu);
+	// super.onCreateOptionsMenu(menu, inflater);
+	// }
 
 	/* Handles item selections */
 	public boolean onOptionsItemSelected(MenuItem item) {

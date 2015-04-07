@@ -3,36 +3,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" 
+  
     android:gravity="center">
 
     <Button
         android:id="@+id/button_eat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/button_selector_eat"
         android:text="Eat" />
 
     <Button
         android:id="@+id/button_work"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/button_selector_work"
         android:text="Work" />
 
     <Button
         android:id="@+id/button_heart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/button_selector_heart"
         android:text="Heart Me" />
 
     <Button
         android:id="@+id/button_pedo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/button_selector_walk"
         android:text="Walk Me" />
 
     <Button
         android:id="@+id/button_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/button_selector_health"
         android:text="My Health" />
 
 </LinearLayout>

@@ -2,10 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+  
+    android:background="@color/yellow"
     android:orientation="vertical" >
 
     <Spinner
-        android:id="@+id/spinner_work"
+        android:id="@+id/spinner_intent_work"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Spinner
+        android:id="@+id/spinner_unintent_work"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Spinner
+        android:id="@+id/spinner_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -13,8 +25,7 @@
         android:id="@+id/textview_work"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-                android:layout_gravity="center"
-        
+        android:layout_gravity="center"
         android:text="OR" />
 
     <Button
@@ -23,5 +34,18 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Quick Add Burned Calories" />
+
+    <Button
+        android:id="@+id/btn_total_calories_burned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="View" />
+
+    <TextView
+        android:id="@+id/textview_total_calories_burned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
 
 </LinearLayout>

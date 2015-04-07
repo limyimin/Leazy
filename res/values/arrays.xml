@@ -1,4 +1,56 @@
 <resources>
+
+    <string-array name="items_food">
+        <item>-Select food eaten-</item>
+        <item name="1">Nasi Lemak</item>
+        <item name="2">Mee Goreng</item>
+        <item name="3">Fish and Chips</item>
+        <item name="4">Wholemeal bread </item>
+        <item name="5">Maggi </item>
+        <item name="6">Ayam Penyet</item>
+        <item name="7">McD</item>
+        <item name="8">Cheese Cake</item>
+        <item name="9">Fired Rice</item>
+    </string-array>
+    <string-array name="items_kcal">
+        <item>0</item>
+        <item name="1"> 100</item>
+        <item name="2"> 200</item>
+        <item name="3"> 300</item>
+        <item name="4"> 400</item>
+        <item name="5"> 500</item>
+        <item name="6"> 600</item>
+        <item name="7"> 700</item>
+        <item name="8"> 800</item>
+    </string-array>
+    <string-array name="items_exercise_burn_intent">
+        <item>-Select exercise done-</item>
+        <item>Walking</item>
+        <item>Jogging</item>
+        <item>Hiking</item>
+        <item>Cycling</item>
+        <item>Swimming</item>
+    </string-array>
+    <string-array name="items_exercise_burn_unintent">
+        <item>-Select activity done-</item>
+        <item>Gardening</item>
+        <item>Gardening</item>
+        <item>Sleeping</item>
+        <item>Walking</item>
+        <item>Doing House Chores</item>
+        <item>Cooking</item>
+    </string-array>
+    <string-array name="items_time">
+        <item>-</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>1 and (&#189;) hour</item>
+        <item>2 hours</item>
+        <item>2 and (&#189;) hour</item>
+        <item>3 hours</item>
+        <item>3 and (&#189;) hour</item>
+        <item>4 hours</item>
+    </string-array>
     <string-array name="sensitivity_preference">
         <item>@string/extra_high</item>
         <item>@string/very_high</item>
@@ -10,41 +62,35 @@
         <item>@string/very_low</item>
         <item>@string/extra_low</item>
     </string-array>
-
     <string-array name="sensitivity_preference_values">
         <item>1.9753</item>
         <item>2.9630</item>
-        <item>4.4444</item><!-- 10 * 1.5^(-2) -->
-        <item>6.6667</item><!-- 10 * 1.5^(-1) -->
+        <item>4.4444</item> <!-- 10 * 1.5^(-2) -->
+        <item>6.6667</item> <!-- 10 * 1.5^(-1) -->
         <item>10</item>
-        <item>15</item><!--     10 * 1.5      -->
-        <item>22.5</item><!--   10 * 1.5^2    -->
+        <item>15</item> <!-- 10 * 1.5 -->
+        <item>22.5</item> <!-- 10 * 1.5^2 -->
         <item>33.75</item>
         <item>50.625</item>
     </string-array>
-
     <string-array name="operation_level_preference">
         <item>@string/run_in_background</item>
         <item>@string/keep_screen_on</item>
         <item>@string/wake_up</item>
     </string-array>
-
     <string-array name="operation_level_preference_values">
         <item>run_in_background</item>
         <item>keep_screen_on</item>
         <item>wake_up</item>
     </string-array>
-
     <string-array name="units_preference">
         <item>@string/units_metric</item>
         <item>@string/units_imperial</item>
     </string-array>
-
     <string-array name="units_preference_values">
         <item>metric</item>
         <item>imperial</item>
     </string-array>
-
     <string-array name="exercise_type_preference">
         <item>@string/exercise_type_running</item>
         <item>@string/exercise_type_walking</item>
@@ -53,7 +99,6 @@
         <item>running</item>
         <item>walking</item>
     </string-array>
-
     <string-array name="maintain_preference">
         <item>@string/maintain_nothing</item>
         <item>@string/maintain_pace</item>
@@ -64,7 +109,6 @@
         <item>pace</item>
         <item>speed</item>
     </string-array>
-
     <string-array name="speaking_interval_preference">
         <item>@string/interval_15_seconds</item>
         <item>@string/interval_30_seconds</item>
@@ -81,6 +125,5 @@
         <item>5</item>
         <item>10</item>
     </string-array>
-
 
 </resources>

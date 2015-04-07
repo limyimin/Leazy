@@ -13,7 +13,26 @@
 	<color name="white">#FFFFFF</color>
 	<color name="magenta">#442E52</color>
 	<color name="orange">#FF9900</color>
-	<color name="dark_orange">#FF6600</color>
+	<color name="light_orange">#FF6600</color>
 	<color name="screen_background">#333</color>
     <color name="display_background">#000</color>
+    
+    <color name="light_green">#00EC00</color>
+    <color name="dark_green">#009100</color>
+    
+    <color name="light_blue">#00FFFF</color>
+    <color name="dark_blue">#00CCFF</color>
+    
+    <color name="light_pink">#FF0099</color>
+    <color name="dark_pink">#CC0099</color>
+    
+     <color name="light_purple">#CC33FF</color>
+    <color name="dark_purple">#993399</color>
+    
+     <color name="dark_orange">#FF3300</color>
+     
+     <color name="yellow">#f9e070</color>
+     
+     
+    
 </resources>
