@@ -1,8 +1,5 @@
 package com.fcsit.leazy;
 
-import com.google.android.gms.internal.bm;
-
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,8 +23,6 @@ public class HomeFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		
-		
 
 		View v = inflater.inflate(R.layout.login, container, false);
 
@@ -90,14 +85,13 @@ public class HomeFragment extends Fragment {
 				Log.d("HF", "userName=" + userName);
 				String password = editTextPassword.getText().toString();
 				Log.d("HF", "password=" + password);
-				
-				
-//				Data data = getArguments().getParcelable("data");
-//				data.getUsername();
-//				data.getPassword();
-//				data.getAge();
-//				data.getWeight();
-//				data.getHeight();
+
+				// Data data = getArguments().getParcelable("data");
+				// data.getUsername();
+				// data.getPassword();
+				// data.getAge();
+				// data.getWeight();
+				// data.getHeight();
 				// fetch the Password form database for respective user
 				// nameS
 
@@ -105,41 +99,39 @@ public class HomeFragment extends Fragment {
 						.getSinlgeEntry(userName);
 				Log.d("HF", "storedPassword=" + storedPassword);// not exist
 
-				
-				
 				int storedWeight = loginDataBaseAdapter
 						.getSinlgeWeight(userName);
 				Log.d("HF", "storedWeight=" + storedWeight);
 
-				
 				int storedHeight = loginDataBaseAdapter
 						.getSinlgeHeight(userName);
 				Log.d("HF", "storedHeight=" + storedHeight);
 
-				
-				
 				// check if the Stored password matches with Password
 				// entered by user
 				if ("".equals(userName)) {
 					editTextUserName.setError("Please enter your username");
 				} else if ("".equals(password)) {
 					editTextPassword.setError("Please enter your password");
-				}
+				} 
+//				else if (loginDataBaseAdapter.checkIsExist(userName)){
+//					Toast.makeText(getActivity(), "Username already exist", Toast.LENGTH_LONG).show();
+//				}
 
 				else if (password.equals(storedPassword)) {
 					Toast.makeText(getActivity(), "Congrats: Login Successful",
 							Toast.LENGTH_LONG).show();
-					//success login --> count user's bmi
-				
+					// success login --> count user's bmi
+
 					Data bmiData = new Data();
-					int bmi = bmiData.bmi(storedWeight, storedHeight);
-					Log.d("HF","bmi="+bmi);
+					float bmi = bmiData.calBMI(storedWeight, storedHeight);
+					Log.d("HF", "bmi=" + bmi);
 					Intent bmiIntent = new Intent();
-					bmiIntent.putExtra("bmi", bmi); //*not yet passed*
-					Log.i("data", "HFbmi=" +bmiData);
-					
+					bmiIntent.putExtra("bmi", bmi); // *not yet passed*
+					Log.i("data", "HFbmi=" + bmiData);
+
 					// dialog.dismiss();
-			
+
 					Intent intent = new Intent(getActivity(),
 							SelectionActivity.class);
 					startActivity(intent);
@@ -154,9 +146,6 @@ public class HomeFragment extends Fragment {
 						SelectionActivity.class);
 				startActivity(intent);
 			}
-
-		
-
 		}
 
 		// private void showDialog() {

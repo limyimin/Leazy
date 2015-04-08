@@ -93,6 +93,17 @@ public class LoginDataBaseAdapter {
 		return numberOFEntriesDeleted;
 	}
 
+	public Boolean checkIsExist(String username) throws SQLException {
+		Cursor cur = db.query("TableData", new String[] { "USERNAME" },
+				"USERNAME" + "=?", new String[] { username }, null, null, null);
+
+		int index = cur.getColumnIndex("USERNAME");
+
+	    boolean exists = cur.moveToFirst();//cur back to first?
+	    cur.close();
+	    return exists ;
+	}
+
 	public String getSinlgeEntry(String userName) {
 		Cursor cursor = db.query("TableData", null, " USERNAME=?",
 				new String[] { userName }, null, null, null);
@@ -103,11 +114,11 @@ public class LoginDataBaseAdapter {
 		}
 		cursor.moveToFirst();
 		String password = cursor.getString(cursor.getColumnIndex("PASSWORD"));
-		Log.d("db", "password= "+password);
+		Log.d("db", "password= " + password);
 		cursor.close();
 		return password;
 	}
-	
+
 	public int getSinlgeWeight(String userName) {
 		Cursor cursor = db.query("TableData", null, " USERNAME=?",
 				new String[] { userName }, null, null, null);
@@ -118,11 +129,11 @@ public class LoginDataBaseAdapter {
 		}
 		cursor.moveToFirst();
 		int weight = cursor.getInt(cursor.getColumnIndex("WEIGHT"));
-		Log.d("db", "weight= "+weight);
+		Log.d("db", "weight= " + weight);
 		cursor.close();
 		return weight;
 	}
-	
+
 	public int getSinlgeHeight(String userName) {
 		Cursor cursor = db.query("TableData", null, " USERNAME=?",
 				new String[] { userName }, null, null, null);
@@ -133,9 +144,31 @@ public class LoginDataBaseAdapter {
 		}
 		cursor.moveToFirst();
 		int height = cursor.getInt(cursor.getColumnIndex("HEIGHT"));
-		Log.d("db", "weight= "+height);
+		Log.d("db", "height= " + height);
 		cursor.close();
 		return height;
+	}
+	
+	public Data getUser(int userid) {
+	    SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+	    String selectQuery = "SELECT  * FROM " + "TableData"+ " = " + userid;
+	    //+ " WHERE "  + "ANOTHERTABLELAH" + " = " + userid;
+
+	    Log.d("db", selectQuery);
+
+	    Cursor c = db.rawQuery(selectQuery, null);
+
+	    if (c != null)
+	        c.moveToFirst();
+
+	    Data user = new Data();
+	    user.setId(c.getInt(c.getColumnIndex("ID")));//KEY_ID key for fetching id
+	    user.setAge((c.getInt(c.getColumnIndex("AGE"))));//KEY_BREAKFAST key for fetching isBreakfast
+	    user.setWeight((c.getInt(c.getColumnIndex("WEIGHT"))));//KEY_LUNCH key for fetching isLunch
+	    user.setHeight((c.getInt(c.getColumnIndex("HEIGHT"))));//KEY_VEGETABLE key for fetching vegetables
+
+	    return user;
 	}
 
 	public void updateEntry(Data data) {

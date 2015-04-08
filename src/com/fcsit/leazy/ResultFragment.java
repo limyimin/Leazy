@@ -12,7 +12,12 @@ public class ResultFragment extends Fragment{
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		return super.onCreateView(inflater, container, savedInstanceState);
+		View v = inflater.inflate(R.layout.fragment_result, container, false);
+		
+		Data bmiData = new Data();
+//		float bmi = bmiData.calBMI(storedWeight, storedHeight);
+		
+		return v;
 	}
 	
 	

@@ -39,14 +39,14 @@
         android:id="@+id/edittext_weight"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="Weight"
+        android:hint="Weight(kg)"
         android:inputType="number" />
 
     <EditText
         android:id="@+id/edittext_height"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="Height"
+        android:hint="Height(cm)"
         android:inputType="number" />
 
     <TextView

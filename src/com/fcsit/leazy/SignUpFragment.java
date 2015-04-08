@@ -22,7 +22,7 @@ public class SignUpFragment extends Fragment {
 
 	LoginDataBaseAdapter loginDataBaseAdapter;
 	Context myContext;
-	
+
 	String gender;
 
 	Data suData;
@@ -70,19 +70,19 @@ public class SignUpFragment extends Fragment {
 				case R.id.radio_male:
 					if (checked)
 						gender = "M";
-						
-						break;
+
+					break;
 				case R.id.radio_female:
 					if (checked)
 						gender = "F";
-						
-						break;
+
+					break;
 				}
 				return gender;
 			}
 
 			public void onClick(View v) {
-				
+
 				// TODO Auto-generated method stub
 
 				String userName = editTextUserName.getText().toString();
@@ -92,7 +92,6 @@ public class SignUpFragment extends Fragment {
 				String age = editTextAge.getText().toString();
 				String weight = editTextWeight.getText().toString();
 				String height = editTextHeight.getText().toString();
-
 
 				isAllFieldsValid();
 
@@ -110,21 +109,31 @@ public class SignUpFragment extends Fragment {
 							Toast.LENGTH_LONG).show();
 					return;
 
-				} else {
-					
-					//Pass data to the page with login activity
+				}
+				if (loginDataBaseAdapter.checkIsExist(userName)) {
+					// Toast.makeText(getActivity(), "Username already exist",
+					// Toast.LENGTH_LONG).show();
+
+					editTextUserName.setError("Username already exist");
+
+				}
+
+				else {
+
+					// Pass data to the page with login activity
 					Data data = getData();
-					Intent intent = new Intent(getActivity(), MainActivity.class);
-					intent.putExtra("data", data); //which contains 6 (age...bmi)
-					startActivity(intent);
-					//equivalent to:
-//					suData.setUsername(userName);
-//					suData.setPassword(password);
-//					suData.setAge(su_age);
-//					suData.setGender(gender);
-//					suData.setWeight(su_weight);
-//					suData.setHeight(su_height);
-					
+					// Intent intent = new Intent(getActivity(),
+					// MainActivity.class);
+					// intent.putExtra("data", data); //which contains 6
+					// (age...bmi)
+					// startActivity(intent);
+					// equivalent to:
+					// suData.setUsername(userName);
+					// suData.setPassword(password);
+					// suData.setAge(su_age);
+					// suData.setGender(gender);
+					// suData.setWeight(su_weight);
+					// suData.setHeight(su_height);
 
 					loginDataBaseAdapter.insertEntry(data);
 					Toast.makeText(getActivity(),
@@ -182,27 +191,29 @@ public class SignUpFragment extends Fragment {
 		}
 		return valid;
 	}
-	
+
 	private Data getData() {
 		// TODO Auto-generated method stub
-		
+
 		String userName = editTextUserName.getText().toString();
 		String password = editTextPassword.getText().toString();
-//		String confirmPassword = editTextConfirmPassword.getText()
-//				.toString();
+		// String confirmPassword = editTextConfirmPassword.getText()
+		// .toString();
 		int su_age = Integer.valueOf(editTextAge.getText().toString());
 		int su_weight = Integer.valueOf(editTextWeight.getText().toString());
+		Log.d("SUF", "su_weight" + su_weight);
 
 		int su_height = Integer.valueOf(editTextHeight.getText().toString());
-		
-//		Data data = new Data();
-//		int h = data.getHeight();
-//		int w = data.getWeight();
-//		int bmi = data.bmi(w, h);
-		
-		Data allData = new Data(userName, password, su_age, su_weight, su_height);
-		Log.i("all data", "signup="+ allData.toString());
+
+		// Data data = new Data();
+		// int h = data.getHeight();
+		// int w = data.getWeight();
+		// int bmi = data.bmi(w, h);
+
+		Data allData = new Data(userName, password, su_age, su_weight,
+				su_height);
+		Log.i("all data", "signup=" + allData.toString());
 		return allData;
-		
+
 	}
 }

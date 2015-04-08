@@ -15,7 +15,7 @@ public class Data implements Parcelable {
 	private int calories;
 	private int calories_burned;
 	private int calories_pedo;
-	private int bmi;
+	private float bmi;
 
 	
 
@@ -33,9 +33,9 @@ public class Data implements Parcelable {
 		
 	}
 
-	public int bmi(int weight, int height) {
+	public float calBMI(int weight, int height) {
 		// TODO Auto-generated constructor stub
-		int bmi = weight / height * height;
+		float bmi = (float)weight / (((float)height/100*(float)height/100));
 		return bmi;
 	}
 
@@ -119,7 +119,7 @@ public class Data implements Parcelable {
 		this.calories = calories;
 	}
 	
-	public int getBmi() {
+	public float getBmi() {
 		return bmi;
 	}
 
@@ -158,7 +158,7 @@ public class Data implements Parcelable {
 		dest.writeInt(calories);
 		dest.writeInt(calories_burned);
 		dest.writeInt(calories_pedo);
-		dest.writeInt(bmi);
+		dest.writeFloat(bmi);
 	}
 
 	@SuppressWarnings("unused")
