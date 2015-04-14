@@ -17,8 +17,6 @@ package com.fcsit.leazy;
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
-
 import com.fcsit.leazy.pedometer.PedometerSettings;
 import com.fcsit.leazy.pedometer.Settings;
 import com.fcsit.leazy.pedometer.StepService;

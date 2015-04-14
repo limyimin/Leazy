@@ -1135,15 +1135,18 @@ containing a value of this type.
         public static final int abc_split_action_bar_is_narrow=0x7f0b0002;
     }
     public static final class color {
-        public static final int abc_search_url_text_holo=0x7f070027;
+        public static final int abc_search_url_text_holo=0x7f07002c;
         public static final int abc_search_url_text_normal=0x7f07000a;
         public static final int abc_search_url_text_pressed=0x7f07000c;
         public static final int abc_search_url_text_selected=0x7f07000b;
         public static final int alice_blue=0x7f070016;
         public static final int almond=0x7f070014;
         public static final int background_tab_pressed=0x7f07000d;
+        public static final int bg_login_green=0x7f07002a;
+        public static final int bg_register_grey=0x7f070028;
         public static final int blue_green=0x7f07000e;
         public static final int bone=0x7f070015;
+        public static final int btn_login_bg=0x7f07002b;
         public static final int common_action_bar_splitter=0x7f070009;
         /**  Sign-in Button Colors 
          */
@@ -1156,8 +1159,8 @@ containing a value of this type.
         public static final int common_signin_btn_light_text_disabled=0x7f070006;
         public static final int common_signin_btn_light_text_focused=0x7f070007;
         public static final int common_signin_btn_light_text_pressed=0x7f070005;
-        public static final int common_signin_btn_text_dark=0x7f070028;
-        public static final int common_signin_btn_text_light=0x7f070029;
+        public static final int common_signin_btn_text_dark=0x7f07002d;
+        public static final int common_signin_btn_text_light=0x7f07002e;
         public static final int dark_blue=0x7f070020;
         public static final int dark_green=0x7f07001e;
         public static final int dark_grey=0x7f070013;
@@ -1166,6 +1169,8 @@ containing a value of this type.
         public static final int dark_purple=0x7f070024;
         public static final int display_background=0x7f07001c;
         public static final int grey=0x7f070012;
+        public static final int input_login_grey=0x7f070029;
+        public static final int input_register_bg_grey=0x7f070027;
         public static final int lavender=0x7f070010;
         public static final int light_blue=0x7f07001f;
         public static final int light_green=0x7f07001d;
@@ -1444,12 +1449,14 @@ containing a value of this type.
         public static final int ic_plusone_standard_off_client=0x7f02007d;
         public static final int ic_plusone_tall_off_client=0x7f02007e;
         public static final int icon=0x7f02007f;
-        public static final int leazy_splashscreen=0x7f020080;
-        public static final int more=0x7f020081;
-        public static final int red_icon=0x7f020082;
+        public static final int leazy=0x7f020080;
+        public static final int leazy_splashscreen=0x7f020081;
+        public static final int more=0x7f020082;
+        public static final int red_icon=0x7f020083;
     }
     public static final class id {
-        public static final int LinearLayout1=0x7f080089;
+        public static final int LinearLayout1=0x7f08008a;
+        public static final int ScrollView1=0x7f080082;
         public static final int action_bar=0x7f08001f;
         public static final int action_bar_activity_content=0x7f080018;
         public static final int action_bar_container=0x7f08001e;
@@ -1471,15 +1478,15 @@ containing a value of this type.
         public static final int box_pace=0x7f080067;
         public static final int box_speed=0x7f08006a;
         public static final int box_steps=0x7f080060;
-        public static final int btn_proceed=0x7f080086;
+        public static final int btn_proceed=0x7f080087;
         public static final int btn_quick_add_burned_calories=0x7f08007b;
         public static final int btn_quick_add_calories=0x7f080053;
         public static final int btn_total_calories=0x7f080054;
         public static final int btn_total_calories_burned=0x7f08007c;
-        public static final int buttonLogin=0x7f080084;
-        public static final int buttonSignUp=0x7f080085;
+        public static final int buttonLogin=0x7f080085;
+        public static final int buttonSignUp=0x7f080086;
         public static final int button_cancel=0x7f080047;
-        public static final int button_create_account=0x7f080095;
+        public static final int button_create_account=0x7f080096;
         public static final int button_desired_pace_lower=0x7f080071;
         public static final int button_desired_pace_raise=0x7f080074;
         public static final int button_done_add_burn_cal=0x7f080046;
@@ -1489,8 +1496,8 @@ containing a value of this type.
         public static final int button_heart=0x7f08004e;
         public static final int button_pedo=0x7f08004f;
         public static final int button_result=0x7f080050;
-        public static final int button_signin=0x7f080087;
-        public static final int button_signup=0x7f080088;
+        public static final int button_signin=0x7f080088;
+        public static final int button_signup=0x7f080089;
         public static final int button_start=0x7f08005a;
         public static final int button_work=0x7f08004d;
         public static final int calories_units=0x7f08006f;
@@ -1507,18 +1514,18 @@ containing a value of this type.
         public static final int distance_units=0x7f080065;
         public static final int distance_value=0x7f080064;
         public static final int dropdown=0x7f080013;
-        public static final int editTextPasswordToLogin=0x7f080083;
-        public static final int editTextUserNameToLogin=0x7f080082;
+        public static final int editTextPasswordToLogin=0x7f080084;
+        public static final int editTextUserNameToLogin=0x7f080083;
         public static final int editText_burned_cal_to_add=0x7f080041;
         public static final int editText_cal_burned_to_add=0x7f080044;
         public static final int editText_cal_to_add=0x7f080048;
         public static final int edit_query=0x7f080033;
-        public static final int edittext_age=0x7f08008f;
-        public static final int edittext_confirm_password=0x7f08008e;
-        public static final int edittext_height=0x7f080091;
-        public static final int edittext_password=0x7f08008d;
-        public static final int edittext_username=0x7f08008c;
-        public static final int edittext_weight=0x7f080090;
+        public static final int edittext_age=0x7f080090;
+        public static final int edittext_confirm_password=0x7f08008f;
+        public static final int edittext_height=0x7f080092;
+        public static final int edittext_password=0x7f08008e;
+        public static final int edittext_username=0x7f08008d;
+        public static final int edittext_weight=0x7f080091;
         public static final int end=0x7f080016;
         public static final int expand_activities_button=0x7f080029;
         public static final int expanded_menu=0x7f08002f;
@@ -1529,12 +1536,12 @@ containing a value of this type.
         public static final int icon=0x7f08002d;
         public static final int ifRoom=0x7f08000e;
         public static final int image=0x7f08002a;
-        public static final int imageView1=0x7f08008b;
+        public static final int imageView1=0x7f08008c;
         public static final int layout=0x7f080056;
         public static final int listMode=0x7f080005;
         public static final int listView1=0x7f08005e;
         public static final int list_item=0x7f08002c;
-        public static final int menu_settings=0x7f080096;
+        public static final int menu_settings=0x7f080097;
         public static final int middle=0x7f080015;
         public static final int never=0x7f08000d;
         public static final int none=0x7f080000;
@@ -1547,8 +1554,8 @@ containing a value of this type.
         public static final int progress_horizontal=0x7f08001c;
         public static final int progressbar=0x7f08005d;
         public static final int radio=0x7f080032;
-        public static final int radio_female=0x7f080094;
-        public static final int radio_male=0x7f080093;
+        public static final int radio_female=0x7f080095;
+        public static final int radio_male=0x7f080094;
         public static final int row_1=0x7f08005f;
         public static final int row_2=0x7f080066;
         public static final int satellite=0x7f080002;
@@ -1582,13 +1589,13 @@ containing a value of this type.
         public static final int terrain=0x7f080003;
         public static final int text=0x7f080058;
         public static final int textView1=0x7f08004b;
-        public static final int textView2=0x7f08008a;
+        public static final int textView2=0x7f08008b;
         public static final int textView_bpm=0x7f08005b;
         public static final int textview_burned_cal_to_add=0x7f080042;
         public static final int textview_cal_burn_to_add=0x7f080045;
         public static final int textview_cal_to_add=0x7f080049;
         public static final int textview_eat=0x7f080052;
-        public static final int textview_gender=0x7f080092;
+        public static final int textview_gender=0x7f080093;
         public static final int textview_total_calories=0x7f080055;
         public static final int textview_total_calories_burned=0x7f08007d;
         public static final int textview_work=0x7f08007a;

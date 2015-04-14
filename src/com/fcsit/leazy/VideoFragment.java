@@ -22,7 +22,7 @@ public class VideoFragment extends Fragment{
         MediaController mc = new MediaController(getActivity());
         vv.setMediaController(mc);
         vv.setVideoURI(uri);
-        vv.start();
+        //vv.start();
 		
 		return v;
 	}

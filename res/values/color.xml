@@ -1,38 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<color name="background_tab_pressed">#6633B5E5</color>
-	<color name="blue_green">#0D98BA</color>
-	<color name="rose">#FF55A3</color>
-	<color name="lavender"> #BF94E4</color>
-	<color name="seablue">#67c9cf</color>
-	<color name="grey">#D6D6D6</color>
-	<color name="dark_grey">#737575</color>
-	<color name="almond">#EFDECD</color>
-	<color name="bone">#E3DAC9</color>
-	<color name="alice_blue">#F0F8FF</color>
-	<color name="white">#FFFFFF</color>
-	<color name="magenta">#442E52</color>
-	<color name="orange">#FF9900</color>
-	<color name="light_orange">#FF6600</color>
-	<color name="screen_background">#333</color>
+
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="blue_green">#0D98BA</color>
+    <color name="rose">#FF55A3</color>
+    <color name="lavender"> #BF94E4</color>
+    <color name="seablue">#67c9cf</color>
+    <color name="grey">#D6D6D6</color>
+    <color name="dark_grey">#737575</color>
+    <color name="almond">#EFDECD</color>
+    <color name="bone">#E3DAC9</color>
+    <color name="alice_blue">#F0F8FF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="magenta">#442E52</color>
+    <color name="orange">#FF9900</color>
+    <color name="light_orange">#FF6600</color>
+    <color name="screen_background">#333</color>
     <color name="display_background">#000</color>
-    
     <color name="light_green">#00EC00</color>
     <color name="dark_green">#009100</color>
-    
     <color name="light_blue">#00FFFF</color>
     <color name="dark_blue">#00CCFF</color>
-    
     <color name="light_pink">#FF0099</color>
     <color name="dark_pink">#CC0099</color>
-    
-     <color name="light_purple">#CC33FF</color>
+    <color name="light_purple">#CC33FF</color>
     <color name="dark_purple">#993399</color>
-    
-     <color name="dark_orange">#FF3300</color>
-     
-     <color name="yellow">#f9e070</color>
-     
-     
-    
+    <color name="dark_orange">#FF3300</color>
+    <color name="yellow">#f9e070</color>
+    <color name="input_register_bg_grey">#3b4148</color>
+    <color name="bg_register_grey">#2e3237</color>
+    <color name="input_login_grey">#222222</color>
+    <color name="bg_login_green">#26ae90</color>
+    <color name="btn_login_bg">#eceef1</color>
+
 </resources>

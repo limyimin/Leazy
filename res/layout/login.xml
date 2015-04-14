@@ -1,58 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginLeft="30dp"
-    android:layout_marginRight="30dp"
-    android:gravity="center_vertical"
-    android:orientation="vertical" >
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_login_green"
+    android:padding="10dp" >
 
-    <EditText
-        android:id="@+id/editTextUserNameToLogin"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Username" >
-        <requestFocus />
-    </EditText>
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingTop="60dp" >
 
-    <EditText
-        android:id="@+id/editTextPasswordToLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        <EditText
+            android:id="@+id/editTextUserNameToLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="Username"
+            android:padding="10dp" />
 
-    <Button
-        android:id="@+id/buttonLogin"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Login" />
-    
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="OR" />
-    
-    <Button
-        android:id="@+id/buttonSignUp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Sign Up" />
-    
-    <Button
-        android:id="@+id/btn_proceed"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:background="@android:color/transparent"
-        android:text="Proceed without login"
-        android:linksClickable="true" />
+        <EditText
+            android:id="@+id/editTextPasswordToLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp" />
 
-    
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:text="Login" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="OR" />
+
+        <Button
+            android:id="@+id/buttonSignUp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:text="Sign Up" />
+
+        <Button
+            android:id="@+id/btn_proceed"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/transparent"
+            android:linksClickable="true"
+            android:text="Proceed without login" />
+    </LinearLayout>
+
+</ScrollView>
